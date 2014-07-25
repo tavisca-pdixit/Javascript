@@ -69,7 +69,8 @@ var myString = function (val) {
     }
 
     this.mylastindex = function (str2) {
-        for (var i = this.myLen - 1; i >= 0; i--) {
+        debugger;
+        for (var i = this.mylength() - 1; i >= 0; i--) {
             if (this.value[i] == str2.value) {
                 return i;
             }
@@ -82,14 +83,12 @@ var myString = function (val) {
         return index2;
     }
 
-    this.myreplace = function (str4,str5) {
-       // var replace2 = this.value.replace(str4.value, str5.value);
-        // return replace2;
-        var i = this.value.indexOf(str4);
-        var j = 0;
+    this.myreplace = function (str4, str5) {
+
         var res = this.value;
+        var i = this.value.indexOf(str4);
         for (var k = i; i < str4.Length; k++) {
-            this.value[k] = rep[j];
+            this.value[k] = str5[j];
             j++;
         }
         return this.value;
