@@ -1,0 +1,85 @@
+.display{
+	.background: #9E9393;
+}
+.displayArea{
+	visibility: hidden;
+	display: none;
+}
+
+.dropDown1{
+	padding-left: 1200px;
+	margin-top: -12px;
+}
+.titleRss{	
+	height: 80px;
+	background: #4B4F97;
+	color: #FFFFFF;
+	font: normal 12px;
+}
+.dropDown{
+	
+	height: 35px;
+	background: #282C6D;
+}
+
+.label1{
+	color: #FFFFFF;
+	font-size: 100%;
+}
+.cardivision1 {
+	width: 1000px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background: #E8F0D4;
+	-webkit-box-shadow: 0px 1px 22px 8px rgba(111,111,117,1);
+	-moz-box-shadow: 0px 1px 22px 8px rgba(111,111,117,1);
+	box-shadow: 0px 1px 22px 8px rgba(111,111,117,1);
+}
+
+.cardetails .hoteldetails{
+	background :#FFFFFF;
+	color :#232323;
+	margin-left: 20px;
+			
+}
+.name{
+	color :#1836CE;
+	text-align: center;
+	
+}
+
+.cardescription, .validity2 {
+	color: #000;
+	text-align: center;
+}
+
+.validity1{
+	color: #1836CE;
+	text-align: center;
+}
+
+.imageclass{
+	width: 300px;
+	height :200px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 355px;
+
+}
+
+.hoteldivision1{	
+	width : 1000px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background: #E8F0D4;
+	-webkit-box-shadow: 0px 1px 22px 8px rgba(111,111,117,1);
+	-moz-box-shadow: 0px 1px 22px 8px rgba(111,111,117,1);
+	box-shadow: 0px 1px 22px 8px rgba(111,111,117,1);
+}
+
+h2{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 40px;
+	font-variant: small-caps;
+}
