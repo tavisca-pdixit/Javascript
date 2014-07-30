@@ -7,16 +7,13 @@ function loadform()
 
   if(id1==1)
   {
-      URL="http://dev-mystique.tavisca.com/api/deals/all?token=twzlrvspgvmi05ww1er2v5l1&$filter=Type eq 'car'";
+      URL="http://dev-mystique.tavisca.com/api/deals/all?token=kyplspylcluqn3r2atlsdzw0&$filter=Type eq 'car'";
   }
   else if(id1==2)
   {
-      URL="http://dev-mystique.tavisca.com/api/deals/all?token=twzlrvspgvmi05ww1er2v5l1&$filter=Type eq 'hotel'";
+      URL="http://dev-mystique.tavisca.com/api/deals/all?token=kyplspylcluqn3r2atlsdzw0&$filter=Type eq 'hotel'";
   }
-  else if(id1==3)
-  {
-      URL="http://dev-mystique.tavisca.com/api/deals/all?token=twzlrvspgvmi05ww1er2v5l1&$filter=Type eq 'activity'";
-  }
+
   var parent = document.getElementById('containerDisp');
   while ( parent.firstChild ) 
   		parent.removeChild( parent.firstChild );
@@ -37,40 +34,38 @@ function loadform()
 					{
 							var cars = result.deals[i];
 						
-							var cardivision = document.createElement("div");
+							var cardivision = document.createElement('div');
 							cardivision.id = "cdiv"+i;
-							cardivision.style.border = "1px solid #1836CE";
-							cardivision.style.width="600px"
+							cardivision.className='cardivision1';
 							
 							var cdetails = document.createElement("div");
-							cdetails.style.background = "#FFFFFF";
-							cdetails.style.color = "#232323";
+							cdetails.className='cardetails';
 							cardivision.appendChild(cdetails);
 							
 							var companyName = document.createElement("H2");
-							companyName.style.color = "#1836CE";
+							companyName.className='name';
 							companyName.innerHTML = cars.rentalCompanyName;
 							cdetails.appendChild(companyName);
 
 							var cardesc = document.createElement("H3");
-							cardesc.style.color = "#000";
+							cardesc.className='cardescription';
 							cardesc.innerHTML = cars.description;
 							cdetails.appendChild(cardesc);
 
 							var validityperoid = document.createElement("H4");
-							validityperoid.style.color = "#000";
+							validityperoid.className='validity1';
 							validityperoid.innerHTML = "----Validity----";
 							cdetails.appendChild(validityperoid);
 
 							var validity = document.createElement("H5");
-							validity.style.color = "#000";
+							validity.className='validity2';
 							validity.innerHTML = cars.validityPeriod.start.date + ", " + cars.validityPeriod.start.time +" to " + cars.validityPeriod.end.date + ", " + cars.validityPeriod.end.time;
 							cdetails.appendChild(validity);
 
 							var carImage = document.createElement("img");
 							carImage.src = cars.imageUrl;
-							carImage.style.width="300px";
-							carImage.style.height="200px";
+							carImage.className='imageclass';
+							
 							cardivision.appendChild(carImage);
 							document.getElementById("containerDisp").appendChild(cardivision);
 					}
@@ -84,38 +79,33 @@ function loadform()
 							
 							var hoteldivision = document.createElement("div");
 							hoteldivision.id = "hdiv"+j;
-							hoteldivision.style.border = "1px solid #1836CE";
-							hoteldivision.style.width="600px"
+							hoteldivision.className='hoteldivision1';
 							
 							var hdetails = document.createElement("div");
-							hdetails.style.background = "#FFFFFF";
-							hdetails.style.color = "#232323";
+							hdetails.className='hoteldetails';
 							hoteldivision.appendChild(hdetails);
 							
 							var hotelName = document.createElement("H1");
-							hotelName.style.color = "#1836CE";
+							hotelName.className='name';
 							hotelName.innerHTML = hotels.hotelName;
 							hdetails.appendChild(hotelName);
 
-							var validityperoid = document.createElement("H4")
 							var hoteldesc = document.createTextNode(hotels.description);
 							hdetails.appendChild(hoteldesc);
 
-
 							var validityperoid = document.createElement("H4");
-							validityperoid.style.color = "#000";
+							validityperoid.className='validity1';
 							validityperoid.innerHTML = "----Validity----";
 							hdetails.appendChild(validityperoid);
 
 							var validity = document.createElement("H5");
-							validity.style.color = "#000";
+							validity.className='validity2';
 							validity.innerHTML = hotels.validityPeriod.start.date + ", " + hotels.validityPeriod.start.time +" to " + hotels.validityPeriod.end.date + ", " + hotels.validityPeriod.end.time;
 							hdetails.appendChild(validity);
 
 							var hotelImage = document.createElement("img");
+							hotelImage.className='imageclass';
 							hotelImage.src = hotels.imageUrl;
-							hotelImage.style.width="300px";
-							hotelImage.style.height="200px";
 							hoteldivision.appendChild(hotelImage);
 							document.getElementById("containerDisp").appendChild(hoteldivision);
 					}
@@ -127,5 +117,3 @@ function loadform()
   xmlhttp.open("GET",URL,true);
   xmlhttp.send();
 }
-
-

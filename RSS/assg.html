@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="rsslink.js">
+	<head>
 
-</script>
-</head>
-<body>
+		<script src="rsslink.js">
+		</script>
 
-<form>
+ 		<link href="styling.css" rel="stylesheet" />
+ 		<link href="css/bootstrap.css" rel="stylesheet" />
+ 		<link href="css/bootstrap.min.css" rel="stylesheet" />
 
-<select id="selected" onchange="loadform()">
-  <option value="select">Select</option>
-  <option value="car">Car</option>
-  <option value="hotel">Hotel</option>
-  <option value="activity">Activity</option>
-</select>
+	</head>
 
-<textarea id="mytext" rows="10" cols="100"></textarea>
-</form>
-<div class = "container" id="containerDisp">
+	<body>
 
-</div>
+	<div class="titleRss">
+		<label> <h2 class"bold-font-weight" style="font-weight: bold;">Rss Feed Reader 1.0!</h2></label>
+	</div>
+	
+	<div class="dropDown">
+		
+		<label></label>
+		<div class="dropDown1">
+		
+			<form>
+				<select id="selected" onchange="loadform()">
+  					<option value="select">Select</option>
+  					<option value="car">Car</option>
+  					<option value="hotel">Hotel</option>
+				</select>
+			</form>
+		</div>
+	</div>
 
-</body>
+	<div class="displayArea">
+		<textarea id="mytext" rows="10" cols="100"></textarea>
+	</div>
+
+	<div class = "container" id="containerDisp">
+	</div>
+
+	</body>
+
 </html>
